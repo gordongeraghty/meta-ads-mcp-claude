@@ -5,8 +5,8 @@
 ## Overview
 
 This MCP server enables Claude to:
-- **Analyze Campaigns** - Get AI-powered insights
-- **Generate Recommendations** - Optimization suggestions
+- **analyse Campaigns** - Get AI-powered insights
+- **Generate Recommendations** - optimisation suggestions
 - **Create Reports** - Natural language reporting
 - **Automate Tasks** - AI-driven campaign management
 
@@ -42,12 +42,12 @@ python mcp_server.py
 Add to your Claude Desktop config:
 ```json
 {
-  "mcpServers": {
-    "meta-ads": {
-      "command": "python",
-      "args": ["path/to/mcp_server.py"]
-    }
-  }
+ "mcpServers": {
+ "meta-ads": {
+ "command": "python",
+ "args": ["path/to/mcp_server.py"]
+ }
+ }
 }
 ```
 
@@ -57,13 +57,13 @@ Add to your Claude Desktop config:
 |------|-------------|
 | `list_campaigns` | Get all campaigns with metrics |
 | `analyze_performance` | AI analysis of campaign performance |
-| `get_recommendations` | Optimization suggestions |
+| `get_recommendations` | optimisation suggestions |
 | `generate_report` | Create performance report |
 
 ## Example Prompts
 
 Ask Claude:
-- "Analyze my Meta Ads campaigns and identify underperformers"
+- "analyse my Meta Ads campaigns and identify underperformers"
 - "What campaigns should I increase budget on?"
 - "Generate a weekly performance report"
 - "Which ad sets have the highest CPA?"
@@ -75,7 +75,7 @@ Ask Claude:
 | `mcp_server.py` | Main MCP server |
 | `analyze_campaigns.py` | Campaign analysis tools |
 | `generate_insights.py` | AI insight generation |
-| `optimize_suggestions.py` | Optimization recommendations |
+| `optimize_suggestions.py` | optimisation recommendations |
 
 ## Security
 
@@ -89,6 +89,6 @@ Ask Claude:
 - [pipeboard-co/meta-ads-mcp](https://github.com/pipeboard-co/meta-ads-mcp) - Reference implementation
 - [meta-ads-automation](../meta-ads-automation) - Python scripts
 
-## License
+## licence
 
-MIT License - Empire Amplify 2025
+MIT licence - Empire Amplify 2025
