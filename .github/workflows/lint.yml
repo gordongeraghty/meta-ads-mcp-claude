@@ -53,4 +53,3 @@ jobs:
     - name: Run tests
       run: |
         if [ -d tests ]; then pytest tests/ -v --cov=. --cov-report=term-missing; fi
-      continue-on-error: true

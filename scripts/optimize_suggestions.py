@@ -23,6 +23,8 @@ def generate_suggestions(account_id, campaign_name=None):
         print(f"Account: {account_id}")
         if campaign_name:
             print(f"Campaign: {campaign_name}")
+        print(f'{"="*80}')
+        print(f"NOTE: Using generic sample suggestions. Connect Meta API for account-specific recommendations.")
         print(f'{"="*80}\n')
 
         # Sample optimization suggestions

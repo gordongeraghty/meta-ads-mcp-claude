@@ -1,94 +1,56 @@
 # Meta Ads MCP for Claude
 
-> **Empire Amplify** - Model Context Protocol (MCP) server for Claude AI to interact with Meta Ads.
+> **Empire Amplify** - Planned Model Context Protocol (MCP) server for Claude AI to interact with Meta Ads.
+
+## Status
+
+> **This repository is a scaffold/template.** The MCP server (`mcp_server.py`) has not been built yet. The existing scripts output hardcoded sample data to demonstrate what the tool structure would look like. No actual Meta API calls or AI analysis is performed.
+
+### What exists:
+- `scripts/analyze_campaigns.py` - Prints hardcoded sample campaign data
+- `scripts/generate_insights.py` - Returns pre-written strategy templates
+- `scripts/optimize_suggestions.py` - Outputs generic optimization tips
+
+### What does NOT exist yet:
+- `mcp_server.py` - The actual MCP server implementation
+- Any real Meta API integration
+- Any real AI/Claude integration
+- OAuth2 authentication
+- Audit logging
 
 ## Overview
 
-This MCP server enables Claude to:
-- **analyse Campaigns** - Get AI-powered insights
-- **Generate Recommendations** - optimisation suggestions
+When implemented, this MCP server would enable Claude to:
+- **Analyse Campaigns** - Get AI-powered insights from real Meta data
+- **Generate Recommendations** - Data-driven optimisation suggestions
 - **Create Reports** - Natural language reporting
 - **Automate Tasks** - AI-driven campaign management
 
 ## What is MCP?
 
-Model Context Protocol (MCP) allows AI assistants like Claude to securely interact with external tools and APIs. This server provides Claude with access to your Meta Ads data.
+Model Context Protocol (MCP) allows AI assistants like Claude to securely interact with external tools and APIs. This server would provide Claude with access to your Meta Ads data.
 
-## Quick Start
+## Planned Tools
 
-### 1. Install
+| Tool | Description | Status |
+|------|-------------|--------|
+| `list_campaigns` | Get all campaigns with metrics | Not built |
+| `analyze_performance` | AI analysis of campaign performance | Not built |
+| `get_recommendations` | Optimisation suggestions | Not built |
+| `generate_report` | Create performance report | Not built |
 
-```bash
-git clone https://github.com/gordongeraghty/meta-ads-mcp-claude.git
-cd meta-ads-mcp-claude
-pip install -r requirements.txt
-```
-
-### 2. Configure
-
-```bash
-cp .env.example .env
-# Add your Meta API credentials
-```
-
-### 3. Run MCP Server
-
-```bash
-python mcp_server.py
-```
-
-### 4. Connect to Claude
-
-Add to your Claude Desktop config:
-```json
-{
- "mcpServers": {
- "meta-ads": {
- "command": "python",
- "args": ["path/to/mcp_server.py"]
- }
- }
-}
-```
-
-## Available Tools
-
-| Tool | Description |
-|------|-------------|
-| `list_campaigns` | Get all campaigns with metrics |
-| `analyze_performance` | AI analysis of campaign performance |
-| `get_recommendations` | optimisation suggestions |
-| `generate_report` | Create performance report |
-
-## Example Prompts
+## Example Prompts (Once Implemented)
 
 Ask Claude:
-- "analyse my Meta Ads campaigns and identify underperformers"
+- "Analyse my Meta Ads campaigns and identify underperformers"
 - "What campaigns should I increase budget on?"
 - "Generate a weekly performance report"
 - "Which ad sets have the highest CPA?"
 
-## Scripts
-
-| Script | Description |
-|--------|-------------|
-| `mcp_server.py` | Main MCP server |
-| `analyze_campaigns.py` | Campaign analysis tools |
-| `generate_insights.py` | AI insight generation |
-| `optimize_suggestions.py` | optimisation recommendations |
-
-## Security
-
-- Uses OAuth2 for Meta API authentication
-- Credentials stored in environment variables
-- Read-only access by default
-- Audit logging enabled
-
 ## Related Projects
 
-- [pipeboard-co/meta-ads-mcp](https://github.com/pipeboard-co/meta-ads-mcp) - Reference implementation
-- [meta-ads-automation](../meta-ads-automation) - Python scripts
+- [pipeboard-co/meta-ads-mcp](https://github.com/pipeboard-co/meta-ads-mcp) - Reference MCP implementation for Meta Ads
 
-## licence
+## License
 
-MIT licence - Empire Amplify 2025
+MIT License - Empire Amplify 2025

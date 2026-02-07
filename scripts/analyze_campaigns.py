@@ -8,13 +8,8 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 from datetime import datetime, timedelta
-
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 def analyze_campaigns(account_id, lookback_days=7):
@@ -28,6 +23,8 @@ def analyze_campaigns(account_id, lookback_days=7):
     try:
         print(f"\nAnalyzing campaigns for account: {account_id}")
         print(f"Lookback period: {lookback_days} days")
+        print(f'{"="*80}')
+        print(f"NOTE: Using sample data. Connect Meta API for real campaign analysis.")
         print(f'{"="*80}\n')
 
         date_start = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
@@ -108,7 +105,10 @@ def analyze_campaigns(account_id, lookback_days=7):
         print(f"\nAggregate Metrics:")
         print(f"  Total Spend: ${total_spend:.2f}")
         print(f"  Total Conversions: {total_conversions}")
-        print(f"  Overall CPA: ${total_spend/total_conversions:.2f}")
+        if total_conversions > 0:
+            print(f"  Overall CPA: ${total_spend/total_conversions:.2f}")
+        else:
+            print(f"  Overall CPA: N/A (no conversions)")
         print(f"  Best Performer: {best_roas_campaign} (ROAS: {best_roas:.2f}x)\n")
 
         # AI Insights (simulated)

@@ -25,6 +25,8 @@ def generate_insights(metric="roas", target=1.5, context="ecommerce"):
         print(f"Metric: {metric.upper()}")
         print(f"Target: {target}")
         print(f"Context: {context.upper()}")
+        print(f'{"="*80}')
+        print(f"NOTE: Using pre-built strategy templates. Connect to real data for tailored insights.")
         print(f'{"="*80}\n')
 
         # Generate context-specific insights
